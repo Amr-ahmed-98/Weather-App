@@ -89,15 +89,15 @@ function getNextSevenDays(): string[] {
  
 
     return (
-      <div className="card bg-white  shadow-xl">
-      <h2 className="card-title text-black text-2xl font-bold p-4">Next 7 days</h2>
+      <div className="card bg-white  shadow-xl dark:bg-slate-800 dark:text-white">
+      <h2 className="card-title text-black text-2xl font-bold p-4 dark:text-white">Next 7 days</h2>
       <div>
         {reorderedDays.map((day, index) => (
           <div 
             key={index} 
             className={`flex items-center px-2 ${day.startsWith('Tomorrow') ? 'bg-graidientBg rounded-md text-white' : ''} py-[3px]`}
           >
-            <p className={`flex-1 ${day.startsWith('Tomorrow') ? 'font-bold' : 'text-black'}`}>
+            <p className={`flex-1 ${day.startsWith('Tomorrow') ? 'font-bold' : 'text-black'} dark:text-white`}>
               {day}
             </p>
             <div className="w-[50px] flex justify-center">
@@ -107,7 +107,7 @@ function getNextSevenDays(): string[] {
                 alt="icon" 
               />
             </div>
-            <p className={`flex-1 text-right ${day.startsWith('Tomorrow') ? 'text-white' : 'text-black'}`}>
+            <p className={`flex-1 text-right ${day.startsWith('Tomorrow') ? 'text-white' : 'text-black'} dark:text-white`}>
               {data?.data?.forecast?.forecastday[index]?.day?.avgtemp_c}°C
             </p>
           </div>

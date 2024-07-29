@@ -20,7 +20,7 @@ export const usePrayerTimes = () => {
 
     const { search } = context;
 
-    const apiResponse = `http://api.aladhan.com/v1/timingsByAddress?address=${search}`;
+    const apiResponse = `https://api.aladhan.com/v1/timingsByAddress?address=${search}`;
 
     const params = search.length > 4 ? {} : {
         latitude: coordinates.lat,

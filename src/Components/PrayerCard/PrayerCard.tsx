@@ -12,8 +12,8 @@ const PrayerCard = () => {
     const filteredData = Object.entries(data.data.timings).slice(0, 7);
 
     return (
-        <div className="card bg-white  text-black  px-2 shadow-xl">
-            <h2 className="card-title text-black text-2xl font-bold p-4">Prayer Times</h2>
+        <div className="card bg-white  text-black  px-2 shadow-xl dark:bg-slate-800 dark:text-white">
+            <h2 className="card-title text-black text-2xl font-bold p-4 dark:text-white">Prayer Times</h2>
             <div className=" text-lg ">
                 {filteredData.map(([prayer, time]) => (
                     <div key={prayer} className='flex justify-between py-3'>

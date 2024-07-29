@@ -37,19 +37,19 @@ const AddCitiesCard : React.FC<AddCitiesInterface> = ({selectedData}) => {
     
     
   return (
-    <div className="bg-white mb-5 rounded-md flex justify-between items-center px-5 py-5 h-[100px]">
+    <div className="bg-white mb-5 rounded-md flex justify-between items-center px-5 py-5 h-[100px] dark:bg-slate-800 dark:text-white">
      {/* icon */}
      <div>
         <img src={data?.current?.condition.icon} alt="icon weather" />
      </div>
      {/* city Name and weather state */}
      <div>
-        <h2 className="text-lg font-semibold text-black">{data?.location?.name}</h2>
-        <p className="text-sm text-gray-600">{data?.current?.condition.text}</p>
+        <h2 className="text-lg font-semibold text-black dark:text-white">{data?.location?.name}</h2>
+        <p className="text-sm text-gray-600 dark:text-white">{data?.current?.condition.text}</p>
      </div>
      {/* temperature */}
      <div>
-        <h1 className="text-4xl font-bold text-black ">{data?.current?.temp_c}°C</h1>
+        <h1 className="text-4xl font-bold text-black dark:text-white">{data?.current?.temp_c}°C</h1>
      </div>
     </div>
   )

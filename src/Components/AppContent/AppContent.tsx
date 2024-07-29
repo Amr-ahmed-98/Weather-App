@@ -12,7 +12,24 @@ import useWeatherData from '../../Hooks/useWeatherData';
 import UpperContent from '../UpperContent/UpperContent';
 import { searchContex } from '../../Context/searchContext';
 
+  import { ThemeContext } from '../../Context/themeContext'
+
 const AppContent = () => {
+
+const themeCTX = useContext(ThemeContext)
+
+if(!themeCTX){
+  throw new Error("ThemeContext must be used within a ThemeProvider");
+}
+const {isDarkMode} = themeCTX
+
+const htmlTag = document.getElementsByTagName('html')[0]
+
+htmlTag.className = isDarkMode ? 'dark' : 'light'
+
+
+
+
   const pageState = useContext(LoadingPageContext);
   const { isLoading, data } = useWeatherData();
 
@@ -51,7 +68,7 @@ const AppContent = () => {
   }
 
   return (
-    <div className='min-h-screen bg-bgMainColor overflow-auto'>
+    <div className='min-h-screen bg-bgMainColor overflow-auto dark:bg-slate-900'>
     <div className='container mx-auto p-4'>
       <div className='grid grid-cols-1 gap-5 md:grid-cols-3 md:grid-rows-[repeat(13,1fr)]'>
         <div className='order-2 md:order-1 md:col-span-1 md:col-start-1 md:row-start-1 md:row-span-9'>

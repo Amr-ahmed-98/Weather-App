@@ -27,11 +27,11 @@ const AddCitiesContainer = () => {
     <div className='overflow-scroll max-h-[400px]'>
         {isClicked === false ? (
           <div
-            className='border-black border-2 border-dashed rounded-md cursor-pointer py-5 px-5 flex gap-3 items-center mb-5'
+            className='border-black border-2 border-dashed rounded-md cursor-pointer py-5 px-5 flex gap-3 items-center mb-5 dark:border-white'
             onClick={() => setIstClicked(!isClicked)}
           >
             <FaPlus className=' text-black bg-white w-[40px] h-[40px] p-2 rounded-md ' />
-            <span className='text-black '>
+            <span className='text-black dark:text-white '>
               Add cities you are interested in
             </span>
           </div>

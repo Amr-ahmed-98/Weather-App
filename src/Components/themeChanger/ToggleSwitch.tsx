@@ -1,15 +1,28 @@
 
-import  { useState } from 'react';
+import  { useContext, useState } from 'react';
 import { FiMoon } from "react-icons/fi";
 import { IoIosSunny } from "react-icons/io";
 import styles from './ToggleSwitch.module.css';
+import { ThemeContext } from '../../Context/themeContext';
+
+
+
 
 const ToggleSwitch = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const themeCTX = useContext(ThemeContext)
+
+  if(!themeCTX){
+    throw new Error("ThemeContext must be used within a ThemeProvider");
+  }
+  const {isDarkMode, setIsDarkMode} = themeCTX
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
+    setIsDarkMode(!isDarkMode)
   };
+  
+  
 
   return (
     <div className={`${styles['toggle-switch']} ${isToggled ? styles['toggled'] : ''}`} onClick={handleToggle}>

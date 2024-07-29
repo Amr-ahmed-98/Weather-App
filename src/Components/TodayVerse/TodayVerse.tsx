@@ -14,8 +14,8 @@ const TodayVerse = () => {
   }
 
   return (
-    <div className='card bg-white h-full  text-black shadow-xl flex flex-col '>
-      <h2 className='card-title text-black text-2xl font-bold p-4'>
+    <div className='card bg-white h-full  text-black shadow-xl flex flex-col dark:bg-slate-800 dark:text-white'>
+      <h2 className='card-title text-black text-2xl font-bold p-4 dark:text-white'>
         Today's Verse
       </h2>
       <div className='text-[40px]  text-center flex-grow '>

@@ -13,9 +13,7 @@
   transition: background-color 0.3s ease;
 }
 
-.toggle-switch.toggled {
-  /* background-color: #4d4dff; */
-}
+
 
 .toggle-thumb {
   width: 40px; /* Adjust the width */

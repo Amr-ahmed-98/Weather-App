@@ -15,7 +15,7 @@ export const useTodayVerse = () => {
     queryKey: ['todayVerse'],
     queryFn: async () => {
       const response = await axios.get<QuranEdition>(
-        `http://api.alquran.cloud/v1/ayah/${randomNumber}`
+        `https://api.alquran.cloud/v1/ayah/${randomNumber}`
       );
       return response.data;
     },

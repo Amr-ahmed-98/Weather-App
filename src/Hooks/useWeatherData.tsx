@@ -32,7 +32,7 @@ const useWeatherData = () => {
             if (!loaded || error || !lat || !lng) {
                 throw new Error('Location not available');
             }
-            return await axios.get('http://api.weatherapi.com/v1/current.json', {
+            return await axios.get('https://api.weatherapi.com/v1/current.json', {
                 params: {
                     key: cleanApiKey,
                     q: query,
