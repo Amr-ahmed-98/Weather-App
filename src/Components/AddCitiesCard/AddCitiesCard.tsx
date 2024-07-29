@@ -20,7 +20,7 @@ const AddCitiesCard : React.FC<AddCitiesInterface> = ({selectedData}) => {
     const {data,isLoading} = useQuery({
         queryKey:['addCitiesCard', selectedData],
         queryFn: async ()=>{
-            const {data} = await axios.get<WeatherData>('http://api.weatherapi.com/v1/current.json',{
+            const {data} = await axios.get<WeatherData>('https://api.weatherapi.com/v1/current.json',{
                 params:{
                     key: cleanApiKey,
                     q: selectedData
