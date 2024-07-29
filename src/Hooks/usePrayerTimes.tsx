@@ -33,7 +33,7 @@ export const usePrayerTimes = () => {
             if(!loaded || geoError || !coordinates?.lat || !coordinates?.lng){
                 throw new Error("Location not available");
             }
-            const response = await axios.get<ApiResponse>(search.length > 4 ? apiResponse : `http://api.aladhan.com/v1/timings/${currentDay}-${currentMonth}-${currentYear}`,{
+            const response = await axios.get<ApiResponse>(search.length > 4 ? apiResponse : `https://api.aladhan.com/v1/timings/${currentDay}-${currentMonth}-${currentYear}`,{
                 params: params,
             });
             return response.data;

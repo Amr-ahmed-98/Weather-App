@@ -3,7 +3,7 @@ import LoaderPage from '../LoaderPage/LoaderPage';
 import Card from '../Card/Card';
 import { LoadingPageContext } from '../../Context/loadingContext';
 import CardDays from '../CardDays/CardDays';
-// import PrayerCard from '../PrayerCard/PrayerCard';
+import PrayerCard from '../PrayerCard/PrayerCard';
 import { usePrayerTimes } from '../../Hooks/usePrayerTimes';
 import TodayVerse from '../TodayVerse/TodayVerse';
 import { useTodayVerse } from '../../Hooks/useTodayVerse';
@@ -88,7 +88,7 @@ htmlTag.className = isDarkMode ? 'dark' : 'light'
   
         <div className='order-4 md:col-start-3 md:row-start-2 md:row-span-6 md:col-span-1'>
           {/* Prayer */}
-          {/* <PrayerCard/> */}
+          <PrayerCard/>
         </div>
   
         <div className='order-5 md:col-start-1 md:row-start-8 md:row-span-7'>
